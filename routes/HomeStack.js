@@ -9,7 +9,9 @@ export default function HomeStack() {
   return(
     <NavigationContainer>
         <Stack.Navigator>
-            <Stack.Screen name="Home" component={Home}/>
+            <Stack.Screen name="Home" component={Home} options={{
+                title: "GameZone"
+            }}/>
             <Stack.Screen name="ReviewDetails" component={ReviewDetails}/>
         </Stack.Navigator>
     </NavigationContainer>
