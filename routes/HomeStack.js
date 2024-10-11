@@ -10,9 +10,15 @@ export default function HomeStack() {
     <NavigationContainer>
         <Stack.Navigator>
             <Stack.Screen name="Home" component={Home} options={{
-                title: "GameZone"
+                title: "GameZone",
+                headerStyle: {backgroundColor: '#FF6F61'},
+                height:60
             }}/>
-            <Stack.Screen name="ReviewDetails" component={ReviewDetails}/>
+            <Stack.Screen name="ReviewDetails" component={ReviewDetails} options={{
+                title: "ReviewDetails",
+                headerStyle: {backgroundColor: '#FF6F61'},
+                height: 60
+            }}/>
         </Stack.Navigator>
     </NavigationContainer>
   )
