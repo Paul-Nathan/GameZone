@@ -7,7 +7,7 @@ export default function Home({navigation}) {
     const [reviews, setReviews] = useState([
         {title: 'Saint Seiya, The Lost Canvas', rating: 5, body:'Chivalry Adventure', key:'1'},
         {title: 'Dragon Ball Z IV', rating: 5, body:'Heroes Adventure', key:'2'},
-        {title: 'FIFA 22', rating: 3.5, body:'Football simulator', key:'3'},
+        {title: 'FIFA 22', rating: 3, body:'Football simulator', key:'3'},
     ])
   return (
     <View style={GlobalStyles.container}>
