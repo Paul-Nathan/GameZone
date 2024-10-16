@@ -1,4 +1,4 @@
-import Navigator from "./routes/HomeStack";
+import Navigator from "./routes/Drawer";
 import Home from './screens/Home';
 
 
