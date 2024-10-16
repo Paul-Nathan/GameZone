@@ -1,11 +1,11 @@
 import React from 'react'
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, ImageBackground } from "react-native";
 import { GlobalStyles } from '../styles/Global';
 
 export default function About() {
   return (
-    <View style={GlobalStyles.container}>
+    <ImageBackground source={require('../assets/game_bg.png')} style={GlobalStyles.container}>
         <Text style={GlobalStyles.titleText}>About Screen</Text>
-    </View>
+    </ImageBackground>
   )
 }

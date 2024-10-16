@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { StyleSheet, View, Text, FlatList, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text, FlatList, TouchableOpacity, ImageBackground } from "react-native";
 import { GlobalStyles } from '../styles/Global';
 import Card from '../shared/Card';
 
@@ -10,7 +10,7 @@ export default function Home({navigation}) {
         {title: 'FIFA 22', rating: 3, body:'Football simulator', key:'3'},
     ])
   return (
-    <View style={GlobalStyles.container}>
+    <ImageBackground source={require('../assets/game_bg.png')} style={GlobalStyles.container}>
         <FlatList
         data={reviews}
         renderItem={({item}) => (
@@ -22,7 +22,7 @@ export default function Home({navigation}) {
         )}
         />
 
-    </View>
+    </ImageBackground>
   )
 }
 
