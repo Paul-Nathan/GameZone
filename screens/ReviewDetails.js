@@ -9,10 +9,10 @@ export default function ReviewDetails({navigation, route}) {
   return (
     <View style={GlobalStyles.container}>
        <Card>
-        <Text>{route.params.title}</Text>
-        <Text>{route.params.body}</Text>
+        <Text style={GlobalStyles.details}>{route.params.title}</Text>
+        <Text style={GlobalStyles.details}>{route.params.body}</Text>
         <View style={styles.rating}>
-          <Text>GameZone rating: </Text>
+          <Text style={GlobalStyles.details}>GameZone rating: </Text>
           <Image source={images.ratings[rating]}/>
         </View>
         {/* <Text>{route.params.rating}</Text> */}

@@ -13,6 +13,9 @@ import {StyleSheet} from 'react-native';
     paragraph:{
         marginVertical: 8,
         lineHeight: 20,
+    },
+    details:{
+        fontSize: 18,
     }
 })
 
