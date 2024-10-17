@@ -9,6 +9,7 @@ export default function ReviewForm({addReview}) {
         <Formik
         initialValues={{title: '', body:'', rating:''}}
         onSubmit={(values, actions) => {
+            //The actions as one of the parameter is being called to reset the form below
             actions.resetForm();
             addReview(values)
         }}
