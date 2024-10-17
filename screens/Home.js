@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { StyleSheet, View, Text, FlatList, TouchableOpacity, ImageBackground, Modal } from "react-native";
+import { StyleSheet, View, Text, FlatList, TouchableOpacity, ImageBackground, Modal, Keyboard, TouchableWithoutFeedback } from "react-native";
 import { GlobalStyles } from '../styles/Global';
 import Card from '../shared/Card';
 import {MaterialIcons} from '@expo/vector-icons';
@@ -26,6 +26,7 @@ export default function Home({navigation}) {
     <ImageBackground source={require('../assets/game_bg.png')} style={GlobalStyles.container}>
 
       <Modal visible={modalOpen} animationType='slide'>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss()}>
         <View style={styles.modalContent}>
          <MaterialIcons
             name='close'
@@ -35,6 +36,8 @@ export default function Home({navigation}) {
          />
           <ReviewForm addReview={addReview}/>
         </View>
+        </TouchableWithoutFeedback>
+        
       </Modal>
 
       <MaterialIcons

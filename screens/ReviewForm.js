@@ -1,6 +1,6 @@
 import React from 'react'
 import { Formik } from 'formik';
-import { View, StyleSheet, Text, TextInput, Button  } from 'react-native';
+import { View, StyleSheet, Text, TextInput } from 'react-native';
 import {GlobalStyles} from'../styles/Global';
 
 export default function ReviewForm({addReview}) {
