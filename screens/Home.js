@@ -19,7 +19,7 @@ export default function Home({navigation}) {
       setReviews((currentReviews) => {
         return [review, ...currentReviews]
       })
-      // setModalOpen(false);
+      setModalOpen(false);
     }
 
   return (
