@@ -16,6 +16,13 @@ import {StyleSheet} from 'react-native';
     },
     details:{
         fontSize: 18,
+    },
+    input:{
+        borderWidth:1,
+        borderColor:'#ddd',
+        padding: 15,
+        fontSize: 18,
+        borderRadius: 8,
     }
 })
 

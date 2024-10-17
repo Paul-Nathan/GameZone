@@ -3,6 +3,8 @@ import { StyleSheet, View, Text, FlatList, TouchableOpacity, ImageBackground, Mo
 import { GlobalStyles } from '../styles/Global';
 import Card from '../shared/Card';
 import {MaterialIcons} from '@expo/vector-icons';
+import ReviewForm from './ReviewForm';
+
 
 export default function Home({navigation}) {
     const [modalOpen, setModalOpen] = useState(false);
@@ -11,6 +13,15 @@ export default function Home({navigation}) {
         {title: 'Dragon Ball Z IV', rating: 5, body:'Heroes Adventure', key:'2'},
         {title: 'FIFA 22', rating: 3, body:'Football simulator', key:'3'},
     ])
+
+    const addReview = (review) => {
+      review.key = Math.random().toString();
+      setReviews((currentReviews) => {
+        return [review, ...currentReviews]
+      })
+      // setModalOpen(false);
+    }
+
   return (
     <ImageBackground source={require('../assets/game_bg.png')} style={GlobalStyles.container}>
 
@@ -22,7 +33,7 @@ export default function Home({navigation}) {
             style={styles.modalToggleClose}
             onPress={() => setModalOpen(false)}
          />
-          <Text>Hello from the modal</Text>
+          <ReviewForm addReview={addReview}/>
         </View>
       </Modal>
 
