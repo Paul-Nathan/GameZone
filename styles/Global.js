@@ -23,6 +23,13 @@ import {StyleSheet} from 'react-native';
         padding: 15,
         fontSize: 18,
         borderRadius: 8,
+    },
+    errorText:{
+        color:'crimson',
+        fontWeight: 'bold',
+        marginBottom: 10,
+        marginTop: 6,
+        textAlign:'center'
     }
 })
 

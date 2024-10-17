@@ -35,21 +35,29 @@ export default function ReviewForm({addReview}) {
                 placeholder='Review title'
                 onChangeText={props.handleChange('title')}
                 value={props.values.title}
+                onBlur={props.handleBlur('title')}
                 />
+                <Text style={GlobalStyles.errorText}>{props.touched.title && props.errors.title}</Text>
+
                 <TextInput
                 multiline
                 style={GlobalStyles.input}
                 placeholder='Review body'
                 onChangeText={props.handleChange('body')}
                 value={props.values.body}
+                onBlur={props.handleBlur('body')}
                 />
+                <Text style={GlobalStyles.errorText}>{props.touched.body && props.errors.body}</Text>
+
                 <TextInput
                 style={GlobalStyles.input}
                 placeholder='Rating (1 - 5)'
                 onChangeText={props.handleChange('rating')}
                 value={props.values.rating}
                 keyboardType="numeric"
+                onBlur={props.handleBlur('rating')}
                 />
+                <Text style={GlobalStyles.errorText}>{props.touched.rating && props.errors.rating}</Text>
 
                 <Button title= 'submit' color='#FF6F61' onPress={props.handleSubmit}/>
             </View>
